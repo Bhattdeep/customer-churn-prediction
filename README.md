@@ -1,88 +1,89 @@
-# Customer Churn Prediction Using Machine Learning
+Customer Churn Prediction Using Machine Learning
+📌 Overview
 
-## 📌 Overview
-Customer churn is a critical problem in the telecom industry, where customers may discontinue services due to pricing, service quality, or competition.  
-This project uses a real-world telecom dataset to predict whether a customer is likely to churn using machine learning techniques.
+Customer churn is a critical challenge in the telecom industry, where customers discontinue services due to factors such as pricing, service quality, or competition.
+This project builds a machine learning–based churn prediction system using a real-world telecom dataset to identify customers who are likely to churn, enabling proactive retention strategies.
 
----
+🎯 Objective
 
-## 🎯 Objective
-To build a machine learning classification model that predicts customer churn based on customer demographics, service usage, and account information, helping telecom companies take proactive retention actions.
+To develop and evaluate machine learning models that predict customer churn based on customer demographics, service usage, and account-related information.
 
----
+📊 Dataset
 
-## 📊 Dataset
-- **Dataset Name:** Telco Customer Churn Dataset  
-- **Source:** IBM Sample Data  
-- **File:** `WA_Fn-UseC_-Telco-Customer-Churn.csv`  
-- **Records:** ~7,000 customers  
-- **Features Include:**
-  - Customer demographics (gender, senior citizen, partner, dependents)
-  - Services subscribed (internet service, online security, streaming, etc.)
-  - Account information (contract type, payment method, tenure)
-- **Target Variable:** `Churn` (Yes / No)
+Dataset Name: Telco Customer Churn Dataset
+Source: IBM Sample Data
+File: WA_Fn-UseC_-Telco-Customer-Churn.csv
+Total Records: 7,043 customer
+Features Include:
+Customer demographics (gender, senior citizen, partner, dependents)
+Service subscriptions (internet service, online security, streaming services, etc.)
+Account information (contract type, tenure, payment method)
+Target Variable: Churn (Yes / No)
 
----
+🛠️ Technologies Used
 
-## 🛠️ Technologies Used
-- **Python**
-- **Pandas & NumPy** – data preprocessing
-- **Matplotlib & Seaborn** – exploratory data analysis
-- **Scikit-learn** – model training and evaluation
-- **Jupyter Notebook**
+Python
+Pandas & NumPy – data preprocessing and manipulation
+Matplotlib & Seaborn – data visualization and EDA
+Scikit-learn – model training and evaluation
+Imbalanced-learn (SMOTE) – handling class imbalance
+XGBoost – advanced ensemble learning
+Jupyter Notebook
+VS Code
 
----
+⚙️ Project Workflow
 
-## ⚙️ Project Workflow
-1. Loaded and explored the telecom customer churn dataset
-2. Cleaned missing and inconsistent values
-3. Performed Exploratory Data Analysis (EDA) to identify churn patterns
-4. Encoded categorical features
-5. Trained classification models
-6. Evaluated model performance using accuracy and F1-score
+Loaded and inspected the telecom churn dataset
+Cleaned and preprocessed data (handled missing and inconsistent values)
+Encoded categorical variables
+Handled class imbalance using SMOTE
+Trained multiple machine learning models
+Evaluated models using accuracy, precision, recall, and F1-score
+Saved the best-performing model for future use
 
----
+🤖 Machine Learning Models Used
 
-## 🤖 Machine Learning Models Used
-- Logistic Regression
-- Random Forest Classifier
+Decision Tree Classifier
+Random Forest Classifier
+XGBoost Classifier (Final Selected Model)
 
----
+✅ Results
 
-## ✅ Results
-- Achieved an F1-score of approximately **0.78**
-- The model demonstrates effective prediction of customers likely to churn
-- Balanced precision and recall for churn classification
+Achieved an F1-score of approximately 0.78
+XGBoost provided the best overall performance
+Balanced precision and recall for churn prediction
+Model effectively identifies customers at high risk of churn
 
----
-
-## 📁 Project Structure
-```
-Customer Churn Prediction/
+📁 Project Structure
+customer-churn-prediction/
 │
-├── Customer_Churn_Prediction_using_ML.ipynb
-├── WA_Fn-UseC_-Telco-Customer-Churn.csv
-├── README.md
-├── requirements.txt
+├── env/                               # Virtual environment
+│
+├── churn.py                           # Main Python script for training & evaluation
+├── Customer_Churn_Prediction_using_ML.ipynb  # Jupyter Notebook (EDA + experiments)
+│
+├── WA_Fn-UseC_-Telco-Customer-Churn.csv       # Dataset
+│
+├── xgb_churn_model.pkl                # Trained XGBoost model
+├── encoders.pkl                       # Saved label encoders
+│
+├── requirements.txt                   # Project dependencies
+├── README.md                          # Project documentation
 
-```
----
+🚀 Future Improvements
 
-## 🚀 Future Improvements
-- Address class imbalance using advanced techniques
-- Experiment with additional machine learning models
-- Deploy the model using a web application framework
-- Add real-time churn prediction support
+Use One-Hot Encoding / SMOTENC for better categorical handling
+Perform hyperparameter tuning
+Add cross-validation
+Deploy the model using Flask or FastAPI
+Build a web-based churn prediction system
+Enable real-time predictions
 
----
+👨‍💻 Author
 
-## 👨‍💻 Author
-**Ayush Kumar Agarwal**  
-Computer Science Undergraduate  
-Interests: Software Development, Data Science, Cybersecurity
+DEEPAK BHATT
+Computer Science Undergraduate
+Interests: Software Development, Machine Learning, Data Science
 
----
-
-## 📎 Disclaimer
-This project is intended for educational and learning purposes using a publicly available dataset.
-
+📎 Disclaimer
+This project is intended solely for educational and learning purposes and uses a publicly available dataset.
