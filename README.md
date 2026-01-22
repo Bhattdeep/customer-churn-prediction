@@ -1,117 +1,108 @@
-📊 Customer Churn Prediction Using Machine Learning
-📌 Overview
+# 📊 Customer Churn Prediction Using Machine Learning
 
-Customer churn is a critical challenge in the telecom industry, where customers discontinue services due to factors such as pricing, service quality, or competition.
-This project builds a machine learning–based churn prediction system using a real-world telecom dataset to identify customers who are likely to churn, enabling proactive retention strategies.
+## 📌 Overview
 
-🎯 Objective
+Customer churn is a critical challenge in the telecom industry, where customers discontinue services due to factors such as pricing, service quality, or competition.  
+This project builds a **machine learning–based churn prediction system** using a real-world telecom dataset to identify customers who are likely to churn, enabling **proactive retention strategies**.
 
-To develop and evaluate machine learning models that predict customer churn based on customer demographics, service usage, and account-related information.
+---
 
-📊 Dataset
+## 🎯 Objective
 
-Dataset Name: Telco Customer Churn Dataset
+To develop and evaluate machine learning models that predict customer churn based on:
+- Customer demographics  
+- Service usage patterns  
+- Account-related information  
 
-Source: IBM Sample Data
+---
 
-File: WA_Fn-UseC_-Telco-Customer-Churn.csv
+## 📊 Dataset
 
-Total Records: 7,043 customers
+- **Dataset Name:** Telco Customer Churn Dataset  
+- **Source:** IBM Sample Data  
+- **File:** `WA_Fn-UseC_-Telco-Customer-Churn.csv`  
+- **Total Records:** 7,043 customers  
 
-Features Include:
+### Features Include:
+- Customer demographics (gender, senior citizen, partner, dependents)
+- Service subscriptions (internet service, online security, streaming services, etc.)
+- Account information (contract type, tenure, payment method)
 
-Customer demographics (gender, senior citizen, partner, dependents)
+- **Target Variable:** `Churn` (Yes / No)
 
-Service subscriptions (internet service, online security, streaming services, etc.)
+---
 
-Account information (contract type, tenure, payment method)
+## 🛠️ Technologies Used
 
-Target Variable: Churn (Yes / No)
+- **Python**
+- **Pandas & NumPy** – Data preprocessing and manipulation
+- **Matplotlib & Seaborn** – Data visualization and EDA
+- **Scikit-learn** – Model training and evaluation
+- **Imbalanced-learn (SMOTE)** – Handling class imbalance
+- **XGBoost** – Advanced ensemble learning
+- **Jupyter Notebook**
+- **VS Code**
 
-🛠️ Technologies Used
+---
 
-Python
+## ⚙️ Project Workflow
 
-Pandas & NumPy – data preprocessing and manipulation
+1. Loaded and inspected the telecom churn dataset  
+2. Cleaned and preprocessed data (handled missing and inconsistent values)  
+3. Encoded categorical variables  
+4. Handled class imbalance using **SMOTE**  
+5. Trained multiple machine learning models  
+6. Evaluated models using accuracy, precision, recall, and F1-score  
+7. Saved the best-performing model for future use  
 
-Matplotlib & Seaborn – data visualization and EDA
+---
 
-Scikit-learn – model training and evaluation
+## 🤖 Machine Learning Models Used
 
-Imbalanced-learn (SMOTE) – handling class imbalance
+- Decision Tree Classifier  
+- Random Forest Classifier  
+- **XGBoost Classifier** *(Final Selected Model)*  
 
-XGBoost – advanced ensemble learning
+---
 
-Jupyter Notebook
+## ✅ Results
 
-VS Code
+- Achieved an **F1-score of approximately 0.78**
+- **XGBoost** provided the best overall performance
+- Balanced precision and recall for churn prediction
+- Model effectively identifies customers at high risk of churn
 
-⚙️ Project Workflow
+---
 
-Loaded and inspected the telecom churn dataset
+## 📁 Project Structure
 
-Cleaned and preprocessed data (handled missing and inconsistent values)
-
-Encoded categorical variables
-
-Handled class imbalance using SMOTE
-
-Trained multiple machine learning models
-
-Evaluated models using accuracy, precision, recall, and F1-score
-
-Saved the best-performing model for future use
-
-🤖 Machine Learning Models Used
-
-Decision Tree Classifier
-
-Random Forest Classifier
-
-XGBoost Classifier (Final Selected Model)
-
-✅ Results
-
-Achieved an F1-score of approximately 0.78
-
-XGBoost provided the best overall performance
-
-Balanced precision and recall for churn prediction
-
-Model effectively identifies customers at high risk of churn
-
-📁 Project Structure
+```bash
 customer-churn-prediction/
-│
-├── env/                               # Virtual environment
-├── churn.py                           # Main Python script for training & evaluation
-├── Customer_Churn_Prediction_using_ML.ipynb  # Jupyter Notebook (EDA + experiments)
-├── WA_Fn-UseC_-Telco-Customer-Churn.csv       # Dataset
-├── xgb_churn_model.pkl                # Trained XGBoost model
-├── encoders.pkl                       # Saved label encoders
-├── requirements.txt                   # Project dependencies
-├── README.md                          # Project documentation
+├── env/                                      # Virtual environment
+├── churn.py                                 # Main training & evaluation script
+├── Customer_Churn_Prediction_using_ML.ipynb # EDA & experimentation notebook
+├── WA_Fn-UseC_-Telco-Customer-Churn.csv     # Dataset
+├── xgb_churn_model.pkl                      # Trained XGBoost model
+├── encoders.pkl                             # Saved encoders
+├── requirements.txt                         # Project dependencies
+└── README.md                                # Project documentation
 
+```
 🚀 Future Improvements
 
-Use One-Hot Encoding / SMOTENC for better categorical handling
-
-Perform hyperparameter tuning
-
-Add cross-validation
-
-Deploy the model using Flask or FastAPI
-
-Build a web-based churn prediction system
-
-Enable real-time predictions
+- Use One-Hot Encoding / SMOTENC for better categorical handling
+- Perform hyperparameter tuning
+- Add cross-validation
+- Deploy the model using Flask or FastAPI
+- Build a web-based churn prediction system
+- Enable real-time predictions
 
 👨‍💻 Author
-
 DEEPAK BHATT
-Computer Science Undergraduate
-Interests: Software Development, Machine Learning, Data Science
+
+- Computer Science Undergraduate
+- Interests: Software Development, Machine Learning, Data Science
 
 📎 Disclaimer
 
-This project is intended solely for educational and learning purposes and uses a publicly available dataset.
+- This project is intended solely for educational and learning purposes and uses a publicly available dataset.
